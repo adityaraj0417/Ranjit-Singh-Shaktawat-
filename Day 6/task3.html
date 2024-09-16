@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* global variable */
+        :root{
+            --primarycolor:rgb(138, 43, 226)
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        div{
+            height: 40px;
+            width: 40px;
+            background-color: var(--primarycolor);
+            border-radius: 50%;
+            animation-name: scale;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;        }
+        @keyframes scale{
+            0%{
+                transform: scale(1);
+                opacity: 1;
+            }
+            100%{
+                transform: scale(1,6);
+                opacity: .6;
+            }
+        }
+        h1{
+            /* local variable */
+            --primarycolor: red;
+            color: var(--primarycolor);
+        }
+        /* pseudo element */
+        h1::after{
+            /* before */
+            content: '🚀';
+        }
+        h1::first-letter{
+            color: blue;
+        }
+        p::first-line{
+            color: brown;
+        }
+        ::selection{
+            color: green;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div></div> -->
+    <h1>Techno</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis labore at blanditiis non quibusdam tempora, dicta eius consequuntur ullam facere illo iste incidunt maxime quos possimus quis unde aut repellendus.</p>
+</body>
+</html>

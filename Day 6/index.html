@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       div{
+        height: 100px;
+        width: 100px;
+        background-color: aquamarine;
+        margin: 200px auto;
+        transform: rotate(90deg)
+       }
+       img{
+        transition: all 200ms ease-in-out;
+        filter: opacity(20%);
+       }
+       img:hover{
+        transform: scale(1,2);
+        /* filter: grayscale(0); */
+        /* filter: blur(0); */
+        filter: opacity(100%);
+       }
+    </style>
+</head>
+<body>
+    <div>
+        transform
+    </div>
+    <img src="images.jpeg" width="200"/>
+</body>
+</html>
