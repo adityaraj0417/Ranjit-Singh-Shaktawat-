@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unique ID Generator</title>
+    <style>
+        h2{
+           font-size: 50px;
+            color: #52e14a;
+            background-image: -webkit-linear-gradient(180deg,
+                    #52e14a 0%,
+                    #7cccf8 75%,
+                    #e209f0 76%,
+                    #312eff 50%,
+                    #312eff 50%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            text-fill-color: transparent;
+            -webkit-text-fill-color: transparent;  
+        }
+        button{
+             font-size: 30px;
+            color: rgb(32, 32, 197);
+            background-image: -webkit-linear-gradient(160deg,
+                    #52e14a 40%,
+                    #7cccf8 45%,
+                    #e209f0 66%,
+                    #312eff 60%,
+                    #312eff 50%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            text-fill-color: transparent;
+            -webkit-text-fill-color: transparent;
+        }
+        p{
+             font-size: 20px;
+            color: red;
+            background-image: -webkit-linear-gradient(150deg,
+                    #52e14a 70%,
+                    #7cccf8 80%,
+                    #e209f0 46%,
+                    #312eff 50%,
+                    #312eff 50%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            text-fill-color: transparent;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Generate a Unique ID</h2>
+    <button onclick="generateUniqueID()">Generate ID</button>
+    <p id="uniqueID">Your unique ID will appear here.</p>
+
+    <script>
+        function generateUniqueID() {
+         
+            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+            
+            let randomLetters = '';
+            for (let i = 0; i < 10; i++) {
+                randomLetters += characters.charAt(Math.floor(Math.random() * characters.length));
+            }
+            
+            const numbers = '12345678910';
+            
+            let uniqueID = randomLetters + numbers;
+     
+            uniqueID = uniqueID.split('').sort(() => 0.5 - Math.random()).join('');
+
+            document.getElementById("uniqueID").textContent = "Generated Unique ID: " + uniqueID;
+        }
+    </script>
+</body>
+
+</html>
