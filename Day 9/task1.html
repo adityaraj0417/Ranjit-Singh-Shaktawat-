@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+
+        .hidden {
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="text" class="highlight">Hello</h1>
+    <button onclick="toggleHighlight()">Toggle Element</button>
+    <button onmouseenter="hideElement()">Hide Element</button>
+    <button onclick="showElement()">Show Element</button>
+    <button>Replace Class</button>
+    <script src="./script.js">
+          //EVENTS ;
+            const h1 = document.getElementById('text')
+
+            const hideElement = () => {
+                h1.classList.add('hidden')
+            }
+
+            const showElement = () => {
+                h1.classList.remove('hidden')
+            }
+
+            const toggleHighlight = () => {
+                h1.classList.toggle('highlight')
+            } 
+    </script>
+</body>
+
+</html>
