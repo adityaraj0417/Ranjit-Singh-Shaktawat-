@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Height Transition</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #4CAF50;
+            transition:height 5s ,width 5s;
+            cursor: pointer;
+        }
+
+        .box:hover {
+            height: 400px;
+            width: 400px;
+            /* Increase the height when hovered */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box"></div>
+
+</body>
+
+</html>
