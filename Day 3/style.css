@@ -1,0 +1,36 @@
+ /* #heading{
+    color: aqua;
+} */
+
+.h1{
+    color: rgba(255,0,0,0.521);
+}
+
+h1 {
+    color: blue;
+}
+/* id>>class>>tag name */
+div{
+    color: aquamarine;
+}
+/*color--inherited*/
+ul{
+    list-style-type: lower-alpha;
+}
+a{
+    text-decoration: none;
+}
+#heading{
+    font-family: serif;
+    font-weight: 500;
+    font-style: italic;
+}
+#para
+{
+     /* gives space between two line */
+    line-height: 40px;
+    /* gives space  between two word */
+    word-spacing: 10px;
+    /* gives space between two letters */
+    letter-spacing: 10px;
+}

@@ -1,0 +1,11 @@
+form{
+    border: 2px solid black;
+    width: 200px;
+    height: 200px;
+    background-color: skyblue;
+    padding: 40px;
+    box-shadow: 10px 10px 20px white;
+    position: absolute;
+    top: 100px;
+    left: 40vw;
+}
